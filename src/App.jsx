@@ -1,30 +1,40 @@
-
-import { Route, Routes } from 'react-router-dom'
-import './App.scss'
-import Header from './components/Layout/Header/Header'
-import Main from './components/Main/Main'
-import { useContext } from 'react'
-import { MotionStudyContext } from './context'
-import Footer from './components/Layout/Footer/Footer'
+import { Route, Routes } from "react-router-dom";
+import "./App.scss";
+import Header from "./components/Layout/Header/Header";
+import Main from "./components/Main/Main";
+import { useContext, useEffect } from "react";
+import { MotionStudyContext } from "./context";
+import Footer from "./components/Layout/Footer/Footer";
+import Cambridge from "./components/Pages/Cambridge/Cambridge";
+import { ToastContainer } from "react-toastify";
 
 function App() {
-  const {modal} = useContext(MotionStudyContext)
+  const { modal } = useContext(MotionStudyContext);
   let router = [
     {
-      id:1,
-      path:"/",
-      element:<Main />
-    }
-  ]
+      id: 1,
+      path: "/",
+      element: <Main />,
+    },
+    {
+      id: 2,
+      path: "/cambridge",
+      element: <Cambridge />,
+    },
+  ];
+
   return (
-   <div className='app'>
- {!modal && <Header />}
-<Routes>
-{router.map((el) => <Route path={el.path} element={el.element}/>)}
-</Routes>
-<Footer />
-   </div>
-  )
+    <div className="app">
+      {!modal && <Header />}
+      <Routes>
+        {router.map((el) => (
+          <Route path={el.path} element={el.element} />
+        ))}
+      </Routes>
+      <Footer />
+      <ToastContainer />
+    </div>
+  );
 }
 
-export default App
+export default App;

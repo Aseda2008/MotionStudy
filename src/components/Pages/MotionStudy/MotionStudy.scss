@@ -1,278 +1,284 @@
-#Study{
-    .Study{
-   &--block{
-       display: flex;
-       align-items: start;
-       justify-content: space-between;
-       margin: 65px 0;
-       position: relative;
-         &__rigth{
-       position: relative;
-            .bg{
-                   width: 599px;
-            }
-            .Ellipse4{
-       top: -25px;
-                right: -2%;
-                width: 300px;
-                position: absolute;
-            }
-             .Ellipse6{
-                position: absolute;
-                width: 160px;
-                top: 40px;
-                left: 30px;
-            }
-            .Ellipse7 {
-    position: absolute;
-    right: 30px;
-    top: 408px;
-    width: 160px;
-             }
-             .Ellipse5 {
-     position: absolute;
-     left: -1px;
-     top: 300px;
-     width: 300px;
-             }
-             }
-             &__left{
-            margin-top: 30px;
-            font-family: "Montserrat", sans-serif;
-                 h3{
-     font-weight: 600;
-     font-size: 15px;
-     color: #5609BBCC;
-     font-family: sans-serif;
-                 }
-                 h1{
-     font-weight: 600;
-     font-size: 64px;
-     color: #000000;
-     margin: 20px 0;
-     
-                 }
-                 p{
-     font-weight: 400;
-     font-size: 18px;
-     color: #606060;
-     
-                 }
-             }
-            }
-            &--contact{
-position: absolute;
-width: 760px;
-height: 104px;
--webkit-box-shadow: 0px 0px 17px -0px rgba(66, 68, 90, 0.34);
--moz-box-shadow: 0px 0px 17px -0px rgba(66, 68, 90, 0.34);
-box-shadow: 0px 0px 17px -0px rgba(66, 68, 90, 0.34);
-border-radius:830px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-z-index: 1;
-background: white;
-padding:0 20px;
-top: 650px;
-font-family: "Montserrat", sans-serif;
-&__name{
-    display: flex;
-    gap: 15px;
-      img{
-        width: 50px;
+#Study {
+  .Study {
+    &--block {
+      display: flex;
+      align-items: start;
+      justify-content: space-around;
+      margin: 65px 0;
+      position: relative;
+      &__rigth {
+        position: relative;
+        .bg {
+          width: 499px;
+        }
+        .Ellipse4 {
+          top: -25px;
+          right: -2%;
+          width: 260px;
+          position: absolute;
+        }
+        .Ellipse6 {
+          position: absolute;
+          width: 160px;
+          top: 40px;
+          left: 30px;
+        }
+        .Ellipse7 {
+          position: absolute;
+          right: 30px;
+          top: 330px;
+          width: 160px;
+        }
+        .Ellipse5 {
+          position: absolute;
+          left: -15px;
+          top: 250px;
+          width: 260px;
+        }
       }
-    &--text{
-        p{
-color: #212121;
-font-weight: 400;
-font-size: 12px;
-margin-bottom: 10px;
+      &__left {
+        margin-top: 30px;
+        font-family: "Montserrat", sans-serif;
+        h3 {
+          color: #5609bbcc;
+          font-family: Montserrat;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 100%;
         }
-        input{
-border: none;
-outline: none;
-font-weight: 400;
-font-size: 17px;
-
+        h1 {
+          font-family: Montserrat;
+          font-weight: 600;
+          font-size: 64px;
+          line-height: 110%;
+          letter-spacing: 2px;
+          margin: 35px 0;
+          width: 491px;
         }
+        p {
+          font-weight: 400;
+          font-size: 18px;
+          color: #606060;
+          width: 393px;
+          line-height: 130%;
+          letter-spacing: 0.2px;
+        }
+      }
     }
-}
-&__phone{
-    display: flex;
-    gap: 15px;
-  &--text{
-         img{
-         width: 50px;
-         }
-        p{
-color: #212121;
-font-weight: 400;
-font-size: 12px;
-margin-bottom: 10px;
+    &--contact {
+      position: absolute;
+      width: 750px;
+      height: 90px;
+      -webkit-box-shadow: 0px 0px 17px -0px rgba(66, 68, 90, 0.34);
+      -moz-box-shadow: 0px 0px 17px -0px rgba(66, 68, 90, 0.34);
+      box-shadow: 0px 0px 17px -0px rgba(66, 68, 90, 0.34);
+      border-radius: 830px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1;
+      background: white;
+      padding: 0 20px;
+      top: 580px;
+      left: 147px;
+      font-family: "Montserrat", sans-serif;
+      &__name {
+        display: flex;
+        gap: 15px;
+        img {
+          width: 50px;
         }
-        input{
-border: none;
-outline: none;
-font-weight: 400;
-font-size: 17px;
+        &--text {
+          p {
+            color: #212121;
+            font-weight: 400;
+            font-size: 12px;
+            margin-bottom: 10px;
+          }
+          input {
+            border: none;
+            outline: none;
+            font-weight: 400;
+            font-size: 17px;
+          }
         }
+      }
+      &__phone {
+        display: flex;
+        gap: 15px;
+        &--text {
+          img {
+            width: 50px;
+          }
+          p {
+            color: #212121;
+            font-weight: 400;
+            font-size: 12px;
+            margin-bottom: 10px;
+          }
+          input {
+            border: none;
+            outline: none;
+            font-weight: 400;
+            font-size: 17px;
+          }
+        }
+      }
+      button {
+        width: 209;
+        height: 59;
+        border-radius: 80px;
+        color: white;
+        padding: 19px 40px;
+        background: #109fef;
+        border: none;
+        font-weight: 500;
+        font-size: 17px;
+        cursor: pointer;
+      }
     }
+  }
 }
-button{
-    width: 209;
-height: 59;
-border-radius: 80px;
-color: white;
-padding: 19px 40px;
-background: #109FEF;
-border: none;
-font-weight: 500;
-font-size: 17px;
-}
-            }
-        }
-}
-@media(max-width:992px){
-#Study .Study--block__rigth .bg {
-         width: 401px;
-}
-#Study .Study--block__rigth .Ellipse4 {
-        top: -3px;
-        right: 1px;
-        width: 182px;
-}
-#Study .Study--block {
+@media (max-width: 992px) {
+  #Study .Study--block__rigth .bg {
+    width: 401px;
+  }
+  #Study .Study--block__rigth .Ellipse4 {
+    top: -3px;
+    right: 1px;
+    width: 182px;
+  }
+  #Study .Study--block {
     margin: 42px 0;
     position: relative;
-}
-#Study .Study--block__rigth .Ellipse6 {
-            width: 132px;
-        top: 20px;
-        left: 21px;
-}
-#Study .Study--block__rigth .Ellipse5 {
-        left: -8px;
-        top: 217px;
-        width: 182px;
-}
-#Study .Study--block__rigth .Ellipse7{
-        width: 132px;
-        top: 247px;
-        left: 252px;
-}
-#Study .Study--block__left h3 {
+  }
+  #Study .Study--block__rigth .Ellipse6 {
+    width: 132px;
+    top: 20px;
+    left: 21px;
+  }
+  #Study .Study--block__rigth .Ellipse5 {
+    left: -8px;
+    top: 217px;
+    width: 182px;
+  }
+  #Study .Study--block__rigth .Ellipse7 {
+    width: 132px;
+    top: 247px;
+    left: 252px;
+  }
+  #Study .Study--block__left h3 {
     font-weight: 500;
-}
-#Study .Study--block__left h1 {
+  }
+  #Study .Study--block__left h1 {
     font-weight: 500;
     font-size: 38px;
-}
-#Study .Study--block__left p {
+  }
+  #Study .Study--block__left p {
     font-size: 14px;
+  }
+  #Study .Study--contact {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    position: relative;
+    #Study .Study--contact__name img {
+      width: 36px;
+    }
+    #Study .Study--contact__phone img {
+      width: 36px;
+    }
+    #Study .Study--contact__name--text p {
+      font-weight: 200;
+      font-size: 9px;
+      margin-bottom: 3px;
+    }
+    #Study .Study--contact__phone--text p {
+      font-weight: 200;
+      font-size: 9px;
+      margin-bottom: 3px;
+    }
+    #Study .Study--contact__name--text input {
+      font-size: 10px;
+    }
+    #Study .Study--contact__phone--text input {
+      font-size: 10px;
+    }
+    #Study .Study--contact button {
+      padding: 7px 29px;
+      font-size: 11px;
+    }
+    #Study .Study--contact__phone {
+      gap: 9px;
+    }
+    #Study .Study--contact__name {
+      gap: 9px;
+    }
+  }
 }
-#Study .Study--contact {
-  width: 90%; 
-  max-width: 400px; 
-  margin: 20px auto; 
-  position: relative; 
-#Study .Study--contact__name img {
-    width: 36px;
-}
-#Study .Study--contact__phone img {
-    width: 36px;
-}
-#Study .Study--contact__name--text p {
-    font-weight: 200;
-    font-size: 9px;
-    margin-bottom: 3px;
-}
-#Study .Study--contact__phone--text p {
-    font-weight: 200;
-    font-size: 9px;
-    margin-bottom: 3px;
-}
-#Study .Study--contact__name--text input {
-   font-size: 10px;
-}
-#Study .Study--contact__phone--text input {
-   font-size: 10px;
-}
-#Study .Study--contact button {
-    padding: 7px 29px;
-    font-size: 11px;
-}
-#Study .Study--contact__phone {
-    gap: 9px;
-}
-#Study .Study--contact__name {
-    gap: 9px;
-}
-}
-}   
-@media(max-width:576px){
-#Study .Study--block {
-flex-direction: column;
-margin: 0px 0;
-}
-#Study .Study--block__rigth .bg {
+@media (max-width: 576px) {
+  #Study .Study--block {
+    flex-direction: column;
+    margin: 0px 0;
+  }
+  #Study .Study--block__rigth .bg {
     margin-top: 20px;
     width: 344px;
-}
-#Study .Study--contact {
-        width: 325px;
-        left: 4px;
-        height: 284px;
-        border-radius: 30px;
-        padding: 10px;
-        position: relative;
-        justify-content: space-around;
-        top: 13px;
-        flex-direction: column;
-}
-#Study .Study--contact__phone,
-#Study .Study--contact__name {
-gap: 59px;
-}
-#Study .Study--contact__phone img,
-#Study .Study--contact__name img{
-        width: 52px;
-        height: 52px;
-}
-#Study .Study--contact__phone--text p,
-#Study .Study--contact__name--text p {
-        font-weight: 400;
-        font-size: 16px;
-        margin-bottom: 10px;
-}
-#Study .Study--contact__name--text input,
-#Study .Study--contact__phone--text input {
-        font-size: 17px;
-}
-#Study .Study--contact button {
-      width: 290px;
-      height: 59px;
-      font-size: 17px;
-      font-weight: 500;
-}
-#Study .Study--block__rigth .Ellipse7 {
-        width: 122px;
-        top: 210px;
-        left: 217px;
-}
-#Study .Study--block__rigth .Ellipse6 {
-        width: 122px;
-        top: 53px;
-        left: 23px;
-}
-#Study .Study--block__rigth .Ellipse4 {
-top: 23px;
-right: 13px;
-width: 158px;
-}
-#Study .Study--block__rigth .Ellipse5 {
-left: 8px;
-top: 205px;
-width: 158px;
-}
+  }
+  #Study .Study--contact {
+    width: 325px;
+    left: 4px;
+    height: 284px;
+    border-radius: 30px;
+    padding: 10px;
+    position: relative;
+    justify-content: space-around;
+    top: 13px;
+    flex-direction: column;
+  }
+  #Study .Study--contact__phone,
+  #Study .Study--contact__name {
+    gap: 59px;
+  }
+  #Study .Study--contact__phone img,
+  #Study .Study--contact__name img {
+    width: 52px;
+    height: 52px;
+  }
+  #Study .Study--contact__phone--text p,
+  #Study .Study--contact__name--text p {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  #Study .Study--contact__name--text input,
+  #Study .Study--contact__phone--text input {
+    font-size: 17px;
+  }
+  #Study .Study--contact button {
+    width: 290px;
+    height: 59px;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  #Study .Study--block__rigth .Ellipse7 {
+    width: 122px;
+    top: 210px;
+    left: 217px;
+  }
+  #Study .Study--block__rigth .Ellipse6 {
+    width: 122px;
+    top: 53px;
+    left: 23px;
+  }
+  #Study .Study--block__rigth .Ellipse4 {
+    top: 23px;
+    right: 13px;
+    width: 158px;
+  }
+  #Study .Study--block__rigth .Ellipse5 {
+    left: 8px;
+    top: 205px;
+    width: 158px;
+  }
 }

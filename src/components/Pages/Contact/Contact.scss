@@ -68,6 +68,7 @@
           cursor: pointer;
           transition: 0.3s;
           height: 49px;
+          font-size: 15px;
           &:hover {
             background: #0288d1;
           }
@@ -78,7 +79,7 @@
 
     &--info {
       flex: 1;
-      background: #8e44ad;
+      background: #5609BBB2;
       color: white;
       padding: 40px;
       display: flex;

@@ -1,63 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Video.scss";
+import axios from "axios";
 
 const Video = () => {
-  const videos = [
-    {
-      id: 1,
-      url: "https://www.youtube.com/watch?v=12CzelZHraw",
-    },
-    {
-      id: 2,
-      url: "https://www.youtube.com/watch?v=anotherVideoId",
-    },
-    {
-      id: 3,
-      url: "https://www.youtube.com/watch?v=yetAnotherId",
-    },
-    {
-      id: 4,
-      url: "https://www.youtube.com/watch?v=yetAnotherId",
-    },
-    {
-      id: 4,
-      url: "https://www.youtube.com/watch?v=yetAnotherId",
-    },
-    {
-      id: 4,
-      url: "https://www.youtube.com/watch?v=yetAnotherId",
-    },
-    {
-      id: 4,
-      url: "https://www.youtube.com/watch?v=yetAnotherId",
-    },
-    {
-      id: 4,
-      url: "https://www.youtube.com/watch?v=yetAnotherId",
-    },
-    {
-      id: 4,
-      url: "https://www.youtube.com/watch?v=yetAnotherId",
-    },
-    {
-      id: 4,
-      url: "https://www.youtube.com/watch?v=yetAnotherId",
-    },
-  ];
+  const [videos, setVideos] = useState([]);
+
+  async function getData() {
+    let res = await axios(`http://13.61.25.99/en/home_videos/`);
+    setVideos(res.data);
+    console.log(res.data);
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <section id="video">
       <div className="video">
-        <div className="video--text">
-          <h1>video testimonials from our students</h1>
-        </div>
+        {videos.map((el) => (
+          <div className="video--text">
+            <h1>{el.title}</h1>
+          </div>
+        ))}
         <div className="video--content">
-          {videos.map((video) => (
+          {videos.students_videos?.map((el) => (
             <div className="video--content__iframe">
               <iframe
                 width="550"
                 height="340"
-                src="https://www.youtube.com/embed/XR4kn1npSYA?si=9A4xyLLB0C2gZ0OA"
+                src={el.videos}
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

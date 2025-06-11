@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Contact.scss";
 import { FaTelegramPlane } from "react-icons/fa";
 import phone from "../../../assets/img/call.svg";
 import email from "../../../assets/img/Email.svg";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { AiFillInstagram } from "react-icons/ai";
+import axios from "axios";
 
 const Contact = () => {
+  const [data, setData] = useState([]);
+
+  async function getData() {
+    let res = await axios(`http://13.61.25.99/en/motion_contact/`);
+    setData(res.data);
+    console.log("Data", data);
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <section id="contact">
       <div className="container">
@@ -33,53 +46,56 @@ const Contact = () => {
               </center>
             </div>
           </div>
+          <div className="contact--info__share"></div>
 
-          <div className="contact--info">
-            <div className="contact--info__share">
-            </div>
-            <h3>Contact Info</h3>
-            <p>
-              <img src={phone} alt="img" />
-              <a href="tel:+996500348439">+996 500 34 84 39</a>
-            </p>
-            <p>
-              <img src={email} alt="img" />
-              <a href="mailto:motionweb312@gmail.com">motionweb312@gmail.com</a>
-            </p>
-            <div className="icons">
-              <a
-                href="https://t.me/твой_никнейм"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTelegramPlane />
-              </a>
-              <a
-                href="https://wa.me/твой_никнейм"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <IoLogoWhatsapp />
-              </a>
-              <a
-                href="https://instagram.com/твой_никнейм"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiFillInstagram />
-              </a>
-            </div>
+          {data.map((el) => (
+            <div className="contact--info" key={el.id}>
+              <h3>{el.title}</h3>
+              <p>
+                <img src={phone} alt="img" />
+                <a href="tel:+996500348439">{el.phone}</a>
+              </p>
+              <p>
+                <img src={email} alt="img" />
+                <a href="mailto:motionweb312@gmail.com">
+                  {el.email}
+                </a>
+              </p>
+              <div className="icons">
+                <a
+                  href="https://t.me/твой_никнейм"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTelegramPlane />
+                </a>
+                <a
+                  href="https://wa.me/твой_никнейм"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IoLogoWhatsapp />
+                </a>
+                <a
+                  href="https://instagram.com/твой_никнейм"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillInstagram />
+                </a>
+              </div>
 
-            <iframe
-              src="https://www.google.com/maps?q=42.869859,74.620945&hl=ru&z=16&output=embed"
-              width="100%"
-              height="280"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Google Map"
-            />
-          </div>
+              <iframe
+                src="https://www.google.com/maps?q=42.869859,74.620945&hl=ru&z=16&output=embed"
+                width="100%"
+                height="280"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Google Map"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>

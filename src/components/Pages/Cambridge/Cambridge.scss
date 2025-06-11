@@ -1,0 +1,82 @@
+#cambridge {
+  padding: 50px 0;
+  .cambridge {
+    &--content {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      h1 {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: capitalize;
+        hr {
+          margin-top: 15px;
+          width: 140px;
+          height: 3px;
+          background: #6483f6;
+          border: none;
+        }
+      }
+      img {
+        width: 1166px;
+        height: 436px;
+        object-fit: cover;
+      }
+    }
+    &--text {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      h2 {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: capitalize;
+        color: #002ac0;
+      }
+      .p {
+        margin-bottom: 30px;
+      }
+      p {
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-transform: capitalize;
+        color: #001254;
+        width: 85%;
+      }
+      h3 {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: capitalize;
+        color: #010d39;
+      }
+      h5 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        color: #333333;
+        img {
+            width: 22px;
+            height: 15px;
+        }
+      }
+    }
+  }
+}
