@@ -14,12 +14,13 @@
       }
     }
     &--content {
-      padding: 70px 0 70px 70px;
+      padding: 70px 0 70px 80px;
       display: flex;
-      gap: 50px;
       overflow: scroll;
       scrollbar-width: none;
-
+      iframe {
+        margin: 0 20px;
+      }
 
       &::-webkit-scrollbar {
         display: none;

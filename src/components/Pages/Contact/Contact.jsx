@@ -9,9 +9,12 @@ import axios from "axios";
 
 const Contact = () => {
   const [data, setData] = useState([]);
+  const [contact, setContact] = useState([]);
 
   async function getData() {
     let res = await axios(`http://13.61.25.99/en/motion_contact/`);
+    let res2 = await axios(`http://13.61.25.99/en/client_contact/`);
+    setContact(res2.data);
     setData(res.data);
     console.log("Data", data);
   }
@@ -24,28 +27,30 @@ const Contact = () => {
     <section id="contact">
       <div className="container">
         <div className="contact">
-          <div className="contact--form">
-            <h2>Send a message</h2>
-            <div className="form--inputs">
-              <div className="row">
-                <input type="text" placeholder="First Name" />
-                <input type="text" placeholder="Last Name" />
+          {contact.map((el) => (
+            <div className="contact--form">
+              <h2>{el.title}</h2>
+              <div className="form--inputs">
+                <div className="row">
+                  <input type="text" placeholder="First Name" />
+                  <input type="text" placeholder="Last Name" />
+                </div>
+                <div className="row">
+                  <input type="text" placeholder="Phone" />
+                  <input type="email" placeholder="Email" />
+                </div>
+                <input
+                  type="text"
+                  placeholder="Group or Company"
+                  className="full"
+                />
+                <textarea placeholder="How can we help?" className="full" />
+                <center>
+                  <button type="submit">Submit</button>
+                </center>
               </div>
-              <div className="row">
-                <input type="text" placeholder="Phone" />
-                <input type="email" placeholder="Email" />
-              </div>
-              <input
-                type="text"
-                placeholder="Group or Company"
-                className="full"
-              />
-              <textarea placeholder="How can we help?" className="full" />
-              <center>
-                <button type="submit">Submit</button>
-              </center>
             </div>
-          </div>
+          ))}
           <div className="contact--info__share"></div>
 
           {data.map((el) => (
@@ -57,9 +62,7 @@ const Contact = () => {
               </p>
               <p>
                 <img src={email} alt="img" />
-                <a href="mailto:motionweb312@gmail.com">
-                  {el.email}
-                </a>
+                <a href="mailto:motionweb312@gmail.com">{el.email}</a>
               </p>
               <div className="icons">
                 <a
